@@ -7,44 +7,9 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/home-footer.css">
+    <link rel="stylesheet" href="CSS/projects.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ragib Guliyev</title>
-    <style>
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; /* Could be more or less, depending on screen size */
-        }
-
-        .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -63,18 +28,35 @@
     <main>
         <div class="wrapper">
             <h1 style="text-align: center;">My Projects</h1>
-            <div class="projects" onclick="openModal('project1Modal')">
-                <h2>Project 1</h2>
-                <p>Project 1 is a project that I've been working on for a while. It's a project that I'm very proud of and I'm excited to share it with you.</p>
+            <div class="projects">
+                <div class="singleproject" onclick="openModal('project1Modal')">
+                    <h2> Database-Frontend-Integrated-Project </h2>
+                    <p>World Cup web application which contains CRUD operations, well-
+                        designed frontend, and backend using MySQL, Node.js, React.js, CSS</p>
+                </div>
             </div>
-            <div class="projects" onclick="openModal('project2Modal')">
-                <h2>Project 2</h2>
-                <p>Project 2 is a project that I've been working on for a while. It's a project that I'm very proud of and I'm excited to share it with you.</p>
+
+            <div class="projects">
+                <div class="singleproject" onclick="openModal('project2Modal')">
+                    <h2>Spam Detection AI</h2>
+                    <p>The project aims to develop an AI-driven spam detector to identify and
+                        block spam emails, thus protecting end users and saving costs for
+                        companies.</p>
             </div>
-            <div class="projects" onclick="openModal('project3Modal')">
-                <h2>Project 3</h2>
-                <p>Project 3 is a project that I've been working on for a while. It's a project that I'm very proud of and I'm excited to share it with you.</p>
+
+            <div class="projects">
+                <div class="singleproject" onclick="openModal('project3Modal')">
+                    <h2>Social and Environmental Effect of COVID-19</h2>
+                    <p>The project aims to study and analyze the social and environmental
+                        effects of COVID-19 including, but not limited to, CO2 emission,
+                        inflation, suicide, unemployment rates.</p>
             </div>
+
+            <div class="singleproject" onclick="openModal('project4Modal')">
+                <h2>Quizzy</h2>
+                <p>GUI-based simple quiz game using Python programing language
+                    (Tkinter library) and SqLite3</p>
+        </div>
             <!-- Repeat this structure for other projects, with unique IDs and onclick handlers -->
         </div>
 
@@ -99,36 +81,23 @@
         <div id="project3Modal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('project3Modal')">&times;</span>
-                <h2 style="color: #000;"">Project 3 Details</h2>
+                <h2 style="color: #000;">Project 3 Details</h2>
                 <p style="color: #000;">Here is some more information about Project 3...</p>
             </div>
         </div>
+
+        <div id="project4Modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('project4Modal')">&times;</span>
+                <h2 style="color: #000;">Project 4 Details</h2>
+                <p style="color: #000;">Here is some more information about Project 4...</p>
+            </div>
+        </div>
+
     </main>
 
+    <script src="JS/projects.js"></script>
     
-
-    <script>
-        function openModal(modalId) {
-            var modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = "block";
-            }
-        }
-
-        function closeModal(modalId) {
-            var modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
-            }
-        }
-    </script>
-
 <div class="footer-container">
     <div class="copy">
         <p>Copyright &copy; 2024 - Ragib Guliyev. All rights reserved.</p>
