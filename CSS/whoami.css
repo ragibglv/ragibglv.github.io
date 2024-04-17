@@ -1,0 +1,72 @@
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, #61677A 100%);
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.whoami {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.whoami h1 {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+  font-family: 'futura-bold';
+}
+
+.whoami h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  font-family: 'futura';
+}
+
+.whoami p {
+  margin-bottom: 1em;
+  font-family: 'futura';
+  font-size: 1.0em;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  padding: 20px;
+}
+
+.section img {
+  flex-basis: 50%;
+  width: 100%;
+  max-width: 100%; /* Set a max-width for images */
+  margin: 10px; /* Add margin around images */
+  height: auto;
+}
+
+.section .content {
+  flex-basis: 50%;
+  padding: 0 20px;
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust layout for smaller screens */
+  .section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .section .content, .section img {
+      flex-basis: 100%;
+  }
+}

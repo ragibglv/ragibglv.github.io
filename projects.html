@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="CSS/home-footer.css">
     <link rel="stylesheet" href="CSS/projects.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ragib Guliyev</title>
 </head>
+
 <body>
     <header>
         <div class="container">
-            <a href="/">Ragib Guliyev</a>
+            <a href="/", style='font-family: "futura-bold";'>Ragib Guliyev</a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="about.html">Who Am I?</a>
+                <a href="about.html">About Me</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
                 <a href="future.html">Soon</a>
@@ -42,6 +42,7 @@
                     <p>The project aims to develop an AI-driven spam detector to identify and
                         block spam emails, thus protecting end users and saving costs for
                         companies.</p>
+                </div>
             </div>
 
             <div class="projects">
@@ -50,51 +51,95 @@
                     <p>The project aims to study and analyze the social and environmental
                         effects of COVID-19 including, but not limited to, CO2 emission,
                         inflation, suicide, unemployment rates.</p>
+                </div>
             </div>
 
-            <div class="singleproject" onclick="openModal('project4Modal')">
-                <h2>Quizzy</h2>
-                <p>GUI-based simple quiz game using Python programing language
-                    (Tkinter library) and SqLite3</p>
-        </div>
-            <!-- Repeat this structure for other projects, with unique IDs and onclick handlers -->
-        </div>
 
-        <!-- Modal for Project 1 -->
-        <div id="project1Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project1Modal')">&times;</span>
-                <h2 style="color: #000;">Project 1 Details</h2>
-                <p style="color: #000;">Here is some more information about Project 1...</p>
+            <div class="projects">
+                <div class="singleproject" onclick="openModal('project4Modal')">
+                    <h2>Quizzy</h2>
+                    <p>GUI-based simple quiz game using Python programing language
+                        (Tkinter library) and SqLite3</p>
+                </div>
             </div>
-        </div>
-
-        <div id="project2Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project2Modal')">&times;</span>
-                <h2 style="color: #000;">Project 2 Details</h2>
-                <p style="color: #000;">Here is some more information about Project 2...</p>
-            </div>
-        </div>
-
-
-        <div id="project3Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project3Modal')">&times;</span>
-                <h2 style="color: #000;">Project 3 Details</h2>
-                <p style="color: #000;">Here is some more information about Project 3...</p>
-            </div>
-        </div>
-
-        <div id="project4Modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project4Modal')">&times;</span>
-                <h2 style="color: #000;">Project 4 Details</h2>
-                <p style="color: #000;">Here is some more information about Project 4...</p>
-            </div>
-        </div>
-
     </main>
+
+    <div id="project1Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="btn btn3" onclick="closeModal('project1Modal')"></div>
+                <h2 style="color: white;">Comprehensive World Cup Data Visualization and Management Web Application</h2>
+            </div>
+            <div class="modal-body">
+                <img src="/Assets/WC-Web-Application.jpg" alt="Project Image" class="modal-image">
+                <p style="color: #000;">The project is an extensive and multifaceted web application designed to visualize and manage data from FIFA World Cup tournaments, spanning both men's and women's competitions. It encompasses the creation, reading, updating, and deleting (CRUD) of data through a user-friendly interface, catering to different facets of the tournaments such as squads, matches, players, and awards. This web application utilizes a comprehensive database that includes detailed records of over 1.58 million data points from all 22 men's tournaments (1930-2022) and all 8 women's tournaments (1991-2019).</p>
+                <p style="color: #000;">The application offers a dynamic navigation system, allowing users to delve into various sections like Tournaments, Squads, Players, Matches, and detailed analytics like Match ScoreBoard, Group Standings, Managers, Teams, and Awards. Each section is designed with the end-user in mind, providing functionalities like filtering, sorting, and real-time data updates. For instance, the Tournaments section not only lists the tournaments but also provides intricate details like knockout stage brackets, award winners, and group standings, with interactivity embedded to ensure users can navigate to related data like match details or player profiles seamlessly.</p>
+                <p style="color: #000;">On the technical side, the project leverages MySQL for database management, Python and Flask for the backend, React.js for the frontend, and Docker for containerization, ensuring a scalable and maintainable architecture. The backend is meticulously crafted to handle complex queries, including real-time data fetching, sorting, and filtering, providing a robust foundation for the application. The frontend, developed with React.js, presents a responsive and intuitive interface, making data interaction seamless and efficient.</p>
+                <p style="color: #000;">Furthermore, the application incorporates Docker to streamline development and deployment processes, highlighting the project's emphasis on modern software engineering practices. This not only facilitated a uniform development environment among the team members but also simplified the deployment and scaling of the application.</p>
+                <p style="color: #000;">This World Cup web application stands as a testament to the integration of diverse technologies and collaborative development, showcasing a comprehensive solution for managing and visualizing World Cup data. It reflects a deep understanding of database systems, frontend development, and application architecture, making it a significant project in showcasing the team's technical prowess and dedication to delivering a quality software product.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="links-container" style="overflow: hidden;">
+                    <a href="https://github.com/ragibglv/Database-Frontend-Integrated-Project" style="float: left;">GitHub Repository Of The Project</a>
+                    <a href="https://drive.google.com/file/d/1p9n1YbLF2_0YoWij9L8PWkf2Ed82tij-/view?usp=share_link" style="float: right;">Academic Report Of The Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project2Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="btn btn3" onclick="closeModal('project2Modal')"></div>
+                <h2 style="color: white;">Advanced AI-Driven Spam Detection Across Digital Communications</h2>
+            </div>
+            <div class="modal-body">
+                <img src="/Assets/AI-Spam.jpg" alt="Project Image" class="modal-image">
+                <p style="color: #000;">This project is a sophisticated endeavor targeting the pervasive issue of spam across digital communication platforms such as emails, YouTube comments, and SMS messages. Developed by Ragib Guliyev and Furkan Ataç from the Istanbul Technical University, this initiative capitalizes on a robust amalgamation of machine learning techniques—including Naive Bayes, Random Forest, and Support Vector Machine—enhanced with Lemmatization and Clustering, to elevate the efficiency of spam detection. Deep Learning algorithms further enrich this project, bolstering its capabilities in natural language processing and offering a fortified defense against the ever-evolving challenge of spam.</p>
+                <p style="color: #000;">This comprehensive project embarks on a journey beginning with rigorous data cleaning processes, including Lemmatization, to streamline words to their simplest form. Such meticulous preparation ensures the AI can effectively process and analyze the data. Feature engineering follows, transforming words and sentences into vectors and matrices, setting the stage for meaningful AI insights. Clustering, particularly hierarchical clustering, plays a pivotal role in discerning the natural groupings within the vast datasets, thereby enhancing the project's precision in spam identification.</p>
+                <p style="color: #000;">At the heart of the project's advanced methodologies is the deployment of Deep Learning techniques, with BERT (Bidirectional Encoder Representations from Transformers) standing out for its exceptional ability to understand the context of language in spam detection. Achieving an impressive accuracy rate, the project demonstrates the potential of deep learning in comprehensively tackling spam.</p>
+                <p style="color: #000;">The integration of various machine learning models with neural networks signifies the project's innovative approach to creating a highly accurate and efficient spam detection system. Experimental results, particularly the nuanced performance analysis across different data sets, underscore the project's adaptability and robustness.</p>
+                <p style="color: #000;">Looking forward, the project aspires to explore fusion methods within machine learning approaches, broaden the dataset to encompass a wider range of digital communications, and implement the developed models in real-time spam detection systems. Continuous optimization of the models aims to perfect the most effective spam detection solution.</p>
+                <p style="color: #000;">In summary, the "Spam Detection Using AI" project represents a holistic and advanced approach to combating digital spam, leveraging cutting-edge machine learning and deep learning technologies. It not only addresses a significant challenge in digital communications but also contributes valuable advancements to the fields of natural language processing and cybersecurity. Through ongoing development and refinement, this project is poised to offer significant contributions to ensuring safer and more secure digital environments.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="links-container" style="overflow: hidden;">
+                    <a href="https://github.com/ragibglv/YZV311E_Data_Mining_Project" style="float: left;">GitHub Repository Of The Project</a>
+                    <a href="https://drive.google.com/file/d/1VMs-fUmVVaZq5cwYbiBupQ_bE5apO9fm/view?usp=share_link" style="float: right;">Academic Report Of The Project</a>
+                </div>
+            </div>
+    </div>
+</div>  
+
+
+    <div id="project3Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="btn btn3" onclick="closeModal('project3Modal')"></div>
+                <h2 style="color: white;">Social and Environmental Effect of COVID-19</h2>
+            </div>
+            <div class="modal-body">
+                <img src="/Assets/image-2.jpg" alt="Project Image" class="modal-image">
+                <p style="color: #000;">The project titled "Social and Environmental Effect of COVID-19" is a comprehensive analysis hosted on GitHub, designed to explore the multifaceted impacts of the COVID-19 pandemic on social structures and the environment. While the repository content couldn't be directly accessed for detailed description, it's evident from the context that this work likely employs data analysis, possibly through Python notebooks, to delve into how COVID-19 has altered our societies and ecosystems.</p>
+                <p style="color: #000;">This project could serve as an insightful resource for understanding the broader consequences of the pandemic, beyond the immediate health implications. It may include analyses on changes in social behavior, economic shifts, environmental improvements or detriments due to lockdowns, and overall public health responses. Given the complexity of these themes, this work potentially combines data visualization, statistical analysis, and predictive modeling to offer a holistic view of COVID-19's global footprint.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="links-container" style="overflow: hidden;">
+                    <a href="https://github.com/ragibglv/Social-and-Environmental-effect-of-COVID-19./tree/main" style="float: left;">GitHub Repository Of The Project</a>
+                    <a href="https://drive.google.com/file/d/1VMs-fUmVVaZq5cwYbiBupQ_bE5apO9fm/view?usp=share_link" style="float: right;">Academic Report Of The Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project4Modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('project4Modal')">&times;</span>
+            <h2 style="color: #000;">Project 4 Details</h2>
+            <p style="color: #000;">Here is some more information about Project 4...</p>
+        </div>
+    </div>
+
 
     <script src="JS/projects.js"></script>
     
@@ -104,7 +149,7 @@
     </div>
     <div class="links">
         <a href="index.html">Home</a>
-        <a href="about.html">Who Am I?</a>
+        <a href="about.html">About Me</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
         <a href="future.html">Soon</a>

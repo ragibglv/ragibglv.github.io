@@ -1,3 +1,12 @@
+body{
+    background-image: linear-gradient(to top, rgba(0,0,0,0.4) 0%, #61677A 100%);
+}
+
+main a{
+
+    font-family: 'futura-bold';
+}
+
 .intro {
     font-size: 1.5em;
     margin-top: 3%;
@@ -7,4 +16,58 @@
 .intro h1 {
     padding: 0;
     margin: 0;
+    font-family: 'futura-bold';
+    font-size: 1.7em;
+}
+
+.intro p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'futura-bold';
+}
+
+.intro h2 {
+  padding: 0;
+  margin: 0;
+  font-family: 'futura-bold';
+  font-size: 1.0em;
+  text-decoration: underline;
+}
+
+
+/* About Me Link Styles */
+.About-me h2 a {
+    color: white; /* Assuming you want to keep the color scheme consistent */
+    padding-left: 20px; /* Or adjust based on specific alignment needs within .About-me */
+    padding-right: 20px;
+    font-size: 0.9em;
+    transition: all 0.3s ease-in-out;
+    font-family: 'futura-bold'; /* Ensuring font consistency */
+    text-decoration: none; /* Removes the underline by default */
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.About-me h2 a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white; /* Matching the underline color with the link color */
+    transform: scaleX(0);
+    transform-origin: right; /* Starts the scaling from the right */
+    transition: transform 0.3s ease-in-out;
+}
+
+.About-me h2 a:hover {
+    color: white; /* Optional: Change color on hover if needed */
+    transform: scale(1.15) translateY(-5px); /* Combining transformations */
+}
+
+.About-me h2 a:hover::before {
+    transform: scaleX(1); /* Scales to full width on hover */
+    transform-origin: left; /* Animating back from left */
 }
