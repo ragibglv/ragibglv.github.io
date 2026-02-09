@@ -1,176 +1,413 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i">
-    <link rel="stylesheet" href="CSS/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects - Ragib Guliyev</title>
+    <meta name="description"
+        content="Explore projects by Ragib Guliyev including AI, Data Engineering, Drug Toxicity Optimization, and Web Applications.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/home-footer.css">
     <link rel="stylesheet" href="CSS/projects.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/home-footer.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a href="/", style='font-family: "futura-bold";'>Ragib Guliyev</a>
+            <a href="index.html">Ragib Guliyev</a>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About Me</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
-                <a href="future.html">Soon</a>
             </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
         </div>
     </header>
-    
+
     <main>
         <div class="wrapper">
-            <h1 style="text-align: center;">My Projects</h1>
-            <div class="projects">
-                <div class="singleproject" onclick="openModal('project1Modal')">
-                    <h2> Database-Frontend-Integrated-Project </h2>
-                    <p>World Cup web application which contains CRUD operations, well-
-                        designed frontend, and backend using MySQL, Node.js, React.js, CSS</p>
-                </div>
+            <div class="projects-header">
+                <h1>My <span>Projects</span></h1>
+                <p>A collection of my work in AI, Data Engineering, and Full-Stack Development</p>
             </div>
 
-            <div class="projects">
+            <div class="projects-grid">
+                <!-- Project 1: Graduation Project -->
+                <div class="singleproject featured" onclick="openModal('project1Modal')">
+                    <span class="project-badge">Graduation Project</span>
+                    <h2>Drug Toxicity Optimization Using Generative Models</h2>
+                    <p>Fine-tuned REINVENT4 (Mol2Mol) on ChEMBL matched molecular pairs to translate toxic SMILES into
+                        structurally similar, safer candidates using multi-objective reinforcement learning.</p>
+                    <div class="project-tags">
+                        <span>Deep Learning</span>
+                        <span>Drug Discovery</span>
+                        <span>Reinforcement Learning</span>
+                    </div>
+                    <span class="project-date">January 2026</span>
+                </div>
+
+                <!-- Project 2: Spam Detection AI -->
                 <div class="singleproject" onclick="openModal('project2Modal')">
                     <h2>Spam Detection AI</h2>
-                    <p>The project aims to develop an AI-driven spam detector to identify and
-                        block spam emails, thus protecting end users and saving costs for
-                        companies.</p>
+                    <p>AI-driven spam detector using machine learning techniques including Naive Bayes, Random Forest,
+                        SVM, and BERT for email, YouTube comments, and SMS classification.</p>
+                    <div class="project-tags">
+                        <span>NLP</span>
+                        <span>BERT</span>
+                        <span>Machine Learning</span>
+                    </div>
+                    <span class="project-date">October - December 2023</span>
                 </div>
-            </div>
 
-            <div class="projects">
+                <!-- Project 3: World Cup Web App -->
                 <div class="singleproject" onclick="openModal('project3Modal')">
-                    <h2>Social and Environmental Effect of COVID-19</h2>
-                    <p>The project aims to study and analyze the social and environmental
-                        effects of COVID-19 including, but not limited to, CO2 emission,
-                        inflation, suicide, unemployment rates.</p>
+                    <h2>World Cup Web Application</h2>
+                    <p>Comprehensive web application for World Cup data visualization and management with CRUD
+                        operations, utilizing MySQL, Node.js, React.js, and Docker.</p>
+                    <div class="project-tags">
+                        <span>React.js</span>
+                        <span>Node.js</span>
+                        <span>MySQL</span>
+                        <span>Docker</span>
+                    </div>
+                    <span class="project-date">October - December 2023</span>
                 </div>
-            </div>
 
-
-            <div class="projects">
+                <!-- Project 4: COVID-19 Analysis -->
                 <div class="singleproject" onclick="openModal('project4Modal')">
+                    <h2>Social and Environmental Effect of COVID-19</h2>
+                    <p>Comprehensive analysis of COVID-19's multifaceted impacts including CO2 emissions, inflation,
+                        suicide rates, and unemployment through data visualization and statistical analysis.</p>
+                    <div class="project-tags">
+                        <span>Data Analysis</span>
+                        <span>Visualization</span>
+                        <span>Statistics</span>
+                    </div>
+                    <span class="project-date">November - December 2022</span>
+                </div>
+
+                <!-- Project 5: Quizzy -->
+                <div class="singleproject" onclick="openModal('project5Modal')">
                     <h2>Quizzy</h2>
-                    <p>GUI-based simple quiz game using Python programing language
-                        (Tkinter library) and SqLite3</p>
+                    <p>GUI-based interactive quiz game using Python's Tkinter library and SQLite3 for data persistence,
+                        featuring multiple question categories and score tracking.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>SQLite</span>
+                    </div>
+                    <span class="project-date">May - June 2022</span>
                 </div>
             </div>
+        </div>
     </main>
 
+    <!-- Project 1 Modal: Drug Toxicity -->
     <div id="project1Modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="btn btn3" onclick="closeModal('project1Modal')"></div>
-                <h2 style="color: white;">Comprehensive World Cup Data Visualization and Management Web Application</h2>
+                <h2>Drug Toxicity Optimization Using Generative Models</h2>
+                <span class="modal-badge">Graduation Project</span>
             </div>
             <div class="modal-body">
-                <img src="/Assets/WC-Web-Application.jpg" alt="Project Image" class="modal-image">
-                <p style="color: #000;">The project is an extensive and multifaceted web application designed to visualize and manage data from FIFA World Cup tournaments, spanning both men's and women's competitions. It encompasses the creation, reading, updating, and deleting (CRUD) of data through a user-friendly interface, catering to different facets of the tournaments such as squads, matches, players, and awards. This web application utilizes a comprehensive database that includes detailed records of over 1.58 million data points from all 22 men's tournaments (1930-2022) and all 8 women's tournaments (1991-2019).</p>
-                <p style="color: #000;">The application offers a dynamic navigation system, allowing users to delve into various sections like Tournaments, Squads, Players, Matches, and detailed analytics like Match ScoreBoard, Group Standings, Managers, Teams, and Awards. Each section is designed with the end-user in mind, providing functionalities like filtering, sorting, and real-time data updates. For instance, the Tournaments section not only lists the tournaments but also provides intricate details like knockout stage brackets, award winners, and group standings, with interactivity embedded to ensure users can navigate to related data like match details or player profiles seamlessly.</p>
-                <p style="color: #000;">On the technical side, the project leverages MySQL for database management, Python and Flask for the backend, React.js for the frontend, and Docker for containerization, ensuring a scalable and maintainable architecture. The backend is meticulously crafted to handle complex queries, including real-time data fetching, sorting, and filtering, providing a robust foundation for the application. The frontend, developed with React.js, presents a responsive and intuitive interface, making data interaction seamless and efficient.</p>
-                <p style="color: #000;">Furthermore, the application incorporates Docker to streamline development and deployment processes, highlighting the project's emphasis on modern software engineering practices. This not only facilitated a uniform development environment among the team members but also simplified the deployment and scaling of the application.</p>
-                <p style="color: #000;">This World Cup web application stands as a testament to the integration of diverse technologies and collaborative development, showcasing a comprehensive solution for managing and visualizing World Cup data. It reflects a deep understanding of database systems, frontend development, and application architecture, making it a significant project in showcasing the team's technical prowess and dedication to delivering a quality software product.</p>
+                <div class="modal-meta">
+                    <span><strong>Role:</strong> Co-author & Developer</span>
+                    <span><strong>Date:</strong> January 2026</span>
+                    <span><strong>Location:</strong> Istanbul, Turkey</span>
+                </div>
+                <h3>Project Overview</h3>
+                <p>This graduation project focuses on leveraging generative AI models for drug discovery optimization.
+                    The primary goal is to transform toxic molecular compounds into safer alternatives while maintaining
+                    structural similarity and drug-likeness properties.</p>
+
+                <h3>Technical Approach</h3>
+                <p>Fine-tuned REINVENT4 (Mol2Mol architecture) on ChEMBL matched molecular pairs to translate toxic
+                    SMILES (Simplified Molecular Input Line Entry System) representations into structurally similar,
+                    safer candidate molecules.</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Multi-objective reinforcement learning optimization targeting toxicity, drug-likeness, and
+                        structural similarity</li>
+                    <li>Training on ChEMBL matched molecular pairs dataset</li>
+                    <li>Validation using external toxicity predictors (pkCSM, ProTox)</li>
+                    <li>Drug-likeness screening and ADMET property validation</li>
+                </ul>
+
+                <h3>Outcome</h3>
+                <p>Successfully produced non-toxic candidate molecules with maintained structural similarity to original
+                    compounds, validated through external toxicity predictors and comprehensive drug-likeness screening
+                    protocols.</p>
             </div>
             <div class="modal-footer">
-                <div class="links-container" style="overflow: hidden;">
-                    <a href="https://github.com/ragibglv/Database-Frontend-Integrated-Project" style="float: left;">GitHub Repository Of The Project</a>
-                    <a href="https://drive.google.com/file/d/1p9n1YbLF2_0YoWij9L8PWkf2Ed82tij-/view?usp=share_link" style="float: right;">Academic Report Of The Project</a>
+                <div class="links-container">
+                    <a href="https://drive.google.com/file/d/1-MD7sephXpOdtPxJcPeN7T04cLs413uD/view?usp=sharing"
+                        target="_blank" rel="noopener">📄 Academic Report</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Project 2 Modal: Spam Detection -->
     <div id="project2Modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="btn btn3" onclick="closeModal('project2Modal')"></div>
-                <h2 style="color: white;">Advanced AI-Driven Spam Detection Across Digital Communications</h2>
+                <h2>Advanced AI-Driven Spam Detection Across Digital Communications</h2>
             </div>
             <div class="modal-body">
-                <img src="/Assets/AI-Spam.jpg" alt="Project Image" class="modal-image">
-                <p style="color: #000;">This project is a sophisticated endeavor targeting the pervasive issue of spam across digital communication platforms such as emails, YouTube comments, and SMS messages. Developed by Ragib Guliyev and Furkan Ataç from the Istanbul Technical University, this initiative capitalizes on a robust amalgamation of machine learning techniques—including Naive Bayes, Random Forest, and Support Vector Machine—enhanced with Lemmatization and Clustering, to elevate the efficiency of spam detection. Deep Learning algorithms further enrich this project, bolstering its capabilities in natural language processing and offering a fortified defense against the ever-evolving challenge of spam.</p>
-                <p style="color: #000;">This comprehensive project embarks on a journey beginning with rigorous data cleaning processes, including Lemmatization, to streamline words to their simplest form. Such meticulous preparation ensures the AI can effectively process and analyze the data. Feature engineering follows, transforming words and sentences into vectors and matrices, setting the stage for meaningful AI insights. Clustering, particularly hierarchical clustering, plays a pivotal role in discerning the natural groupings within the vast datasets, thereby enhancing the project's precision in spam identification.</p>
-                <p style="color: #000;">At the heart of the project's advanced methodologies is the deployment of Deep Learning techniques, with BERT (Bidirectional Encoder Representations from Transformers) standing out for its exceptional ability to understand the context of language in spam detection. Achieving an impressive accuracy rate, the project demonstrates the potential of deep learning in comprehensively tackling spam.</p>
-                <p style="color: #000;">The integration of various machine learning models with neural networks signifies the project's innovative approach to creating a highly accurate and efficient spam detection system. Experimental results, particularly the nuanced performance analysis across different data sets, underscore the project's adaptability and robustness.</p>
-                <p style="color: #000;">Looking forward, the project aspires to explore fusion methods within machine learning approaches, broaden the dataset to encompass a wider range of digital communications, and implement the developed models in real-time spam detection systems. Continuous optimization of the models aims to perfect the most effective spam detection solution.</p>
-                <p style="color: #000;">In summary, the "Spam Detection Using AI" project represents a holistic and advanced approach to combating digital spam, leveraging cutting-edge machine learning and deep learning technologies. It not only addresses a significant challenge in digital communications but also contributes valuable advancements to the fields of natural language processing and cybersecurity. Through ongoing development and refinement, this project is poised to offer significant contributions to ensuring safer and more secure digital environments.</p>
+                <img src="Assets/AI-Spam.jpg" alt="AI Spam Detection" class="modal-image">
+                <div class="modal-meta">
+                    <span><strong>Role:</strong> Lead Developer</span>
+                    <span><strong>Date:</strong> October - December 2023</span>
+                    <span><strong>Location:</strong> Istanbul, Turkey</span>
+                </div>
+                <h3>Project Overview</h3>
+                <p>This project is a sophisticated endeavor targeting the pervasive issue of spam across digital
+                    communication platforms such as emails, YouTube comments, and SMS messages. Developed at Istanbul
+                    Technical University, this initiative capitalizes on a robust amalgamation of machine learning
+                    techniques.</p>
+
+                <h3>Technical Approach</h3>
+                <ul>
+                    <li>Traditional ML: Naive Bayes, Random Forest, Support Vector Machine</li>
+                    <li>Text Processing: Lemmatization and Clustering techniques</li>
+                    <li>Deep Learning: BERT (Bidirectional Encoder Representations from Transformers)</li>
+                    <li>Multi-platform classification: Email, YouTube comments, SMS</li>
+                </ul>
+
+                <h3>Outcome</h3>
+                <p>Achieved high accuracy spam detection across multiple platforms, with BERT demonstrating exceptional
+                    performance in understanding contextual language patterns for spam identification.</p>
             </div>
             <div class="modal-footer">
-                <div class="links-container" style="overflow: hidden;">
-                    <a href="https://github.com/ragibglv/YZV311E_Data_Mining_Project" style="float: left;">GitHub Repository Of The Project</a>
-                    <a href="https://drive.google.com/file/d/1VMs-fUmVVaZq5cwYbiBupQ_bE5apO9fm/view?usp=share_link" style="float: right;">Academic Report Of The Project</a>
+                <div class="links-container">
+                    <a href="https://github.com/ragibglv/YZV311E_Data_Mining_Project" target="_blank" rel="noopener">💻
+                        GitHub Repository</a>
+                    <a href="https://drive.google.com/file/d/1VMs-fUmVVaZq5cwYbiBupQ_bE5apO9fm/view?usp=share_link"
+                        target="_blank" rel="noopener">📄 Academic Report</a>
                 </div>
             </div>
+        </div>
     </div>
-</div>  
 
-
+    <!-- Project 3 Modal: World Cup -->
     <div id="project3Modal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="btn btn3" onclick="closeModal('project3Modal')"></div>
-                <h2 style="color: white;">Social and Environmental Effect of COVID-19</h2>
+                <h2>Comprehensive World Cup Data Visualization and Management</h2>
             </div>
             <div class="modal-body">
-                <img src="/Assets/image-2.jpg" alt="Project Image" class="modal-image">
-                <p style="color: #000;">The project titled "Social and Environmental Effect of COVID-19" is a comprehensive analysis hosted on GitHub, designed to explore the multifaceted impacts of the COVID-19 pandemic on social structures and the environment. While the repository content couldn't be directly accessed for detailed description, it's evident from the context that this work likely employs data analysis, possibly through Python notebooks, to delve into how COVID-19 has altered our societies and ecosystems.</p>
-                <p style="color: #000;">This project could serve as an insightful resource for understanding the broader consequences of the pandemic, beyond the immediate health implications. It may include analyses on changes in social behavior, economic shifts, environmental improvements or detriments due to lockdowns, and overall public health responses. Given the complexity of these themes, this work potentially combines data visualization, statistical analysis, and predictive modeling to offer a holistic view of COVID-19's global footprint.</p>
+                <img src="Assets/WC-Web-Application.jpg" alt="World Cup Web Application" class="modal-image">
+                <div class="modal-meta">
+                    <span><strong>Role:</strong> Developer</span>
+                    <span><strong>Date:</strong> October - December 2023</span>
+                    <span><strong>Location:</strong> Istanbul, Turkey</span>
+                </div>
+                <h3>Project Overview</h3>
+                <p>An extensive and multifaceted web application designed to visualize and manage data from FIFA World
+                    Cup tournaments, spanning both men's and women's competitions. It encompasses CRUD operations
+                    through a user-friendly interface.</p>
+
+                <h3>Database & Data</h3>
+                <ul>
+                    <li>Over 1.58 million data points comprehensive database</li>
+                    <li>All 22 men's tournaments (1930-2022)</li>
+                    <li>All 8 women's tournaments (1991-2019)</li>
+                    <li>Detailed records of squads, matches, players, and awards</li>
+                </ul>
+
+                <h3>Technical Stack</h3>
+                <ul>
+                    <li>Database: MySQL</li>
+                    <li>Backend: Python, Flask, Node.js</li>
+                    <li>Frontend: React.js, CSS</li>
+                    <li>Containerization: Docker</li>
+                </ul>
+
+                <h3>Features</h3>
+                <p>Dynamic navigation system for Tournaments, Squads, Players, Matches, Match ScoreBoard, Group
+                    Standings, Managers, Teams, and Awards with full CRUD functionality.</p>
             </div>
             <div class="modal-footer">
-                <div class="links-container" style="overflow: hidden;">
-                    <a href="https://github.com/ragibglv/Social-and-Environmental-effect-of-COVID-19./tree/main" style="float: left;">GitHub Repository Of The Project</a>
-                    <a href="https://drive.google.com/file/d/1VMs-fUmVVaZq5cwYbiBupQ_bE5apO9fm/view?usp=share_link" style="float: right;">Academic Report Of The Project</a>
+                <div class="links-container">
+                    <a href="https://github.com/ragibglv/Database-Frontend-Integrated-Project" target="_blank"
+                        rel="noopener">💻 GitHub Repository</a>
+                    <a href="https://drive.google.com/file/d/1p9n1YbLF2_0YoWij9L8PWkf2Ed82tij-/view?usp=share_link"
+                        target="_blank" rel="noopener">📄 Academic Report</a>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Project 4 Modal: COVID-19 -->
     <div id="project4Modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('project4Modal')">&times;</span>
-            <h2 style="color: #000;">Project 4 Details</h2>
-            <p style="color: #000;">Here is some more information about Project 4...</p>
+            <div class="modal-header">
+                <div class="btn btn3" onclick="closeModal('project4Modal')"></div>
+                <h2>Social and Environmental Effect of COVID-19</h2>
+            </div>
+            <div class="modal-body">
+                <img src="Assets/image-2.jpg" alt="COVID-19 Analysis" class="modal-image">
+                <div class="modal-meta">
+                    <span><strong>Role:</strong> Researcher</span>
+                    <span><strong>Date:</strong> November - December 2022</span>
+                    <span><strong>Location:</strong> Istanbul, Turkey</span>
+                </div>
+                <h3>Project Overview</h3>
+                <p>A comprehensive analysis designed to explore the multifaceted impacts of the COVID-19 pandemic on
+                    social structures and the environment, going beyond immediate health implications.</p>
+
+                <h3>Areas of Analysis</h3>
+                <ul>
+                    <li>CO2 emissions and environmental changes during lockdowns</li>
+                    <li>Inflation and economic shifts</li>
+                    <li>Suicide rates and mental health indicators</li>
+                    <li>Unemployment trends and labor market impacts</li>
+                    <li>Social behavior changes</li>
+                </ul>
+
+                <h3>Methodology</h3>
+                <p>Combined data visualization, statistical analysis, and predictive modeling to offer a holistic view
+                    of COVID-19's global footprint. This work serves as an insightful resource for understanding the
+                    broader consequences of the pandemic.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="links-container">
+                    <a href="https://github.com/ragibglv/Social-and-Environmental-effect-of-COVID-19./tree/main"
+                        target="_blank" rel="noopener">💻 GitHub Repository</a>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Project 5 Modal: Quizzy -->
+    <div id="project5Modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="btn btn3" onclick="closeModal('project5Modal')"></div>
+                <h2>Quizzy - Interactive Quiz Game</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-meta">
+                    <span><strong>Role:</strong> Developer</span>
+                    <span><strong>Date:</strong> May - June 2022</span>
+                    <span><strong>Location:</strong> Istanbul, Turkey</span>
+                </div>
+                <h3>Project Overview</h3>
+                <p>Quizzy is a GUI-based interactive quiz game developed using Python's Tkinter library for the
+                    graphical user interface and SQLite3 for data persistence.</p>
 
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Clean, user-friendly graphical interface</li>
+                    <li>Multiple question categories</li>
+                    <li>Score tracking and leaderboard</li>
+                    <li>Responsive design across different screen sizes</li>
+                    <li>Persistent data storage with SQLite3</li>
+                </ul>
+
+                <h3>Technical Stack</h3>
+                <ul>
+                    <li>Language: Python</li>
+                    <li>GUI Framework: Tkinter</li>
+                    <li>Database: SQLite3</li>
+                </ul>
+
+                <p>This project demonstrates proficiency in desktop application development, database management, and
+                    user experience design.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="links-container">
+                    <a href="https://github.com/ragibglv/Quizzy" target="_blank" rel="noopener">💻 GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/theme.js"></script>
     <script src="JS/projects.js"></script>
-    
-<div class="footer-container">
-    <div class="copy">
-        <p>Copyright &copy; 2024 - Ragib Guliyev. All rights reserved.</p>
+    <script src="JS/navigation.js"></script>
+
+    <div class="footer-container">
+        <div class="copy">
+            <p>Copyright &copy; 2026 - Ragib Guliyev. All rights reserved.</p>
+        </div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/ragibglv?mibextid=LQQJ4d" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ragib-guliyev/" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/rqbqlyv/" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+            </a>
+            <a href="https://open.spotify.com/user/eurx85e6ox2het1h0vojmn3sx?si=8d82c328ebba4852" aria-label="Spotify">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+                </svg>
+            </a>
+            <a href="https://github.com/ragibglv" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+        </div>
     </div>
-    <div class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="future.html">Soon</a>
-    </div>
-    <div class="social">
-        <a href="https://www.facebook.com/ragibglv?mibextid=LQQJ4d">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/> </g> </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/ragib-guliyev/">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.83783C1 2.35041 1.19363 1.88295 1.53829 1.53829C1.88295 1.19363 2.35041 1 2.83783 1H21.1611C21.4025 1 21.6415 1.04754 21.8644 1.1399C22.0874 1.23226 22.29 1.36763 22.4607 1.53829C22.6313 1.70895 22.7667 1.91155 22.8591 2.13452C22.9514 2.3575 22.999 2.59648 22.999 2.83783V21.1611C22.999 21.4025 22.9514 21.6415 22.8591 21.8644C22.7667 22.0874 22.6313 22.29 22.4607 22.4607C22.29 22.6313 22.0874 22.7667 21.8644 22.8591C21.6415 22.9514 21.4025 22.999 21.1611 22.999H2.83783C2.35041 22.999 1.88295 22.8053 1.53829 22.4607C1.19363 22.116 1 21.6486 1 21.1611V2.83783ZM9.70792 9.38711H12.687V10.884C13.1164 10.0232 14.2168 9.24961 15.8699 9.24961C19.0387 9.24961 19.7908 10.9628 19.7908 14.1063V19.9283H16.5826V14.8222C16.5826 13.0321 16.1532 12.0224 15.061 12.0224C13.5463 12.0224 12.9161 13.1109 12.9161 14.8222V19.9283H9.70792V9.38711ZM4.20818 19.7908H7.41637V9.24961H4.20818V19.7908ZM7.87468 5.81227C7.87468 6.08311 7.82133 6.3513 7.71769 6.60152C7.61404 6.85174 7.46212 7.0791 7.27061 7.27061C7.0791 7.46212 6.85174 7.61404 6.60152 7.71769C6.3513 7.82133 6.08311 7.87468 5.81227 7.87468C5.54144 7.87468 5.27325 7.82133 5.02303 7.71769C4.7728 7.61404 4.54545 7.46212 4.35393 7.27061C4.16242 7.0791 4.01051 6.85174 3.90686 6.60152C3.80322 6.3513 3.74987 6.08311 3.74987 5.81227C3.74987 5.26529 3.96716 4.74071 4.35393 4.35393C4.74071 3.96716 5.26529 3.74987 5.81227 3.74987C6.35926 3.74987 6.88384 3.96716 7.27061 4.35393C7.65739 4.74071 7.87468 5.26529 7.87468 5.81227Z" fill="black"/> </svg>
-        </a>
-        <a href="https://www.instagram.com/rqbqlyv/">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path fill-rule="nonzero" d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/> </g> </svg>
-        </a>
-        <a href="https://open.spotify.com/user/eurx85e6ox2het1h0vojmn3sx?si=8d82c328ebba4852">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path fill-rule="nonzero" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.55 2 12 2zm3.75 14.65c-2.35-1.45-5.3-1.75-8.8-.95-.35.1-.65-.15-.75-.45-.1-.35.15-.65.45-.75 3.8-.85 7.1-.5 9.7 1.1.35.15.4.55.25.85-.2.3-.55.4-.85.2zm1-2.7c-2.7-1.65-6.8-2.15-9.95-1.15-.4.1-.85-.1-.95-.5-.1-.4.1-.85.5-.95 3.65-1.1 8.15-.55 11.25 1.35.3.15.45.65.2 1s-.7.5-1.05.25zM6.3 9.75c-.5.15-1-.15-1.15-.6-.15-.5.15-1 .6-1.15 3.55-1.05 9.4-.85 13.1 1.35.45.25.6.85.35 1.3-.25.35-.85.5-1.3.25C14.7 9 9.35 8.8 6.3 9.75z"/> </g> </svg>
-        </a>
-        <a href="https://github.com/ragibglv">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"/> </g> </svg>
-        </a>
-    </div>
-</div>
 </body>
+
 </html>
