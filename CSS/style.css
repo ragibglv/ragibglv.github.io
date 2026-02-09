@@ -1,122 +1,417 @@
-html{
+/* ========================================
+   MODERN DESIGN SYSTEM - CSS VARIABLES
+   ======================================== */
+
+:root,
+[data-theme="dark"] {
+    /* Color Palette - Modern Dark Theme */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: rgba(20, 20, 30, 0.8);
+    --bg-glass: rgba(255, 255, 255, 0.05);
+
+    /* Accent Colors - Vibrant Gradient */
+    --accent-primary: #8b5cf6;
+    --accent-secondary: #06b6d4;
+    --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    --accent-gradient-hover: linear-gradient(135deg, #a78bfa 0%, #22d3ee 100%);
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.5);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(20px);
+    --glass-subtle: rgba(255, 255, 255, 0.03);
+
+    /* Shadows & Glows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --glow-accent: 0 0 30px rgba(139, 92, 246, 0.3);
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 5rem;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 50%;
+    --radius-xl: 24px;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-base: 0.3s ease;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    /* Color Palette - Light Theme */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-card: rgba(255, 255, 255, 0.9);
+    --bg-glass: rgba(0, 0, 0, 0.02);
+
+    /* Accent Colors stay the same for brand consistency */
+    --accent-primary: #7c3aed;
+    --accent-secondary: #0891b2;
+    --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #0891b2 100%);
+    --accent-gradient-hover: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+
+    /* Text Colors */
+    --text-primary: #1e293b;
+    --text-secondary: rgba(30, 41, 59, 0.7);
+    --text-muted: rgba(30, 41, 59, 0.5);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-blur: blur(20px);
+    --glass-subtle: rgba(0, 0, 0, 0.02);
+
+    /* Shadows & Glows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.15);
+    --glow-accent: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    display: none;
+}
+
+/* Theme transition for smoother switching */
+body,
+.header,
+.footer-container,
+.modal,
+.modal-content,
+.singleproject,
+.about-section,
+.contact-form,
+.info-card {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+* {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100% of the viewport height */
-    padding-top: 5rem; /* 5% of the viewport height */
+    min-height: 100vh;
+    padding-top: 5rem;
     margin: 0;
-    background-color: #61677A;
-    font-family: 'Roboto Mono';
-    font-size: 1.5em;
-    box-sizing: border-box; /* padding and border are included in the total width and height of the element */ 
+    background: var(--bg-primary);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    color: var(--text-primary);
+    line-height: 1.6;
     cursor: default;
+    overflow-x: hidden;
 }
 
-main{
-    flex: 1; /* takes the remaining space */
-    padding: 0 5%; /*Optional, can delete it*/
-    color: white; /*Optional, can delete it*/
+/* Animated Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
 }
 
-.wrapper{
+main {
+    flex: 1;
+    padding: 0 5%;
+}
+
+.wrapper {
     display: flex;
     flex-direction: column;
-    margin-right: 20%;
-    margin-left: 20%;
-    
-    @media(max-width: 768px){
-        flex-direction: column;
-        margin-right: 0;
-        margin-left: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    font-family: var(--font-primary);
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--accent-primary);
+}
+
+/* ========================================
+   MODAL STYLES - MODERN
+   ======================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
 
-h1, h2, h3, h4, h5, h6, p, a{
-    font-family: 'Roboto Mono';
-    color: white;
-}
-
-a{
-    text-decoration: none;
-}
-
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: scroll; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px; /* Location of the box */
-}
-
-/* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
-    margin: auto;
+    background: var(--bg-card);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    margin: 5% auto;
     padding: 0;
-    border: 1px solid hsl(0, 0%, 53%);
-    width: 80%; /* Could be more or less, depending on screen size */
-    height: auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s;
+    width: min(90%, 900px);
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg), var(--glow-accent);
+    animation: slideUp 0.4s ease;
 }
 
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* The Close Button */
 .close {
-    color: white;
+    color: var(--text-primary);
     float: right;
-    font-size: 28px;
-    font-weight: bold;
-    background-color: black;
-    border-radius: 50%;
-    padding: 0 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    margin: var(--space-sm);
     cursor: pointer;
-    background-color: #ccc;
+    transition: all var(--transition-fast);
 }
 
-/* Modal Header */
+.close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
 .modal-header {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
+    padding: var(--space-lg);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
+    border-bottom: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
-/* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-header h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
 
-/* Modal Footer */
+.modal-body {
+    padding: var(--space-lg);
+}
+
 .modal-footer {
-    padding: 2px 16px;
-    background-color: #5cb85c;
-    color: white;
-    text-align: right;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--glass-bg);
+    border-top: 1px solid var(--glass-border);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.blur-background {
+    filter: blur(5px);
+    transition: filter var(--transition-normal);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 0 var(--space-sm);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 4rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 0 var(--space-sm);
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        max-height: 80vh;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        margin: 0;
+        min-height: 100vh;
+        border-radius: 0;
+        max-height: 100vh;
+    }
+
+    .modal-header {
+        border-radius: 0;
+    }
+
+    .modal-footer {
+        border-radius: 0;
+    }
 }
