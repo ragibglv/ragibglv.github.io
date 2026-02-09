@@ -185,6 +185,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+        // Check hCaptcha if it exists
+        const hcaptchaResponse = document.querySelector('[name="h-captcha-response"]');
+        if (hcaptchaResponse && !hcaptchaResponse.value) {
+            isFormValid = false;
+            const captchaContainer = document.querySelector('.h-captcha');
+            if (captchaContainer) {
+                let captchaError = captchaContainer.parentElement.querySelector('.captcha-error');
+                if (!captchaError) {
+                    captchaError = document.createElement('span');
+                    captchaError.className = 'error-message captcha-error';
+                    captchaContainer.parentElement.appendChild(captchaError);
+                }
+                captchaError.textContent = 'Please complete the captcha';
+                captchaError.style.display = 'block';
+            }
+        }
+
         if (!isFormValid) {
             e.preventDefault();
             // Scroll to first error
