@@ -1,107 +1,309 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
+<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i">
-    <link rel="stylesheet" href="CSS/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me - Ragib Guliyev</title>
+    <meta name="description"
+        content="Learn more about Ragib Guliyev - AI & Data Engineer at Baykar Technologies, studying at Istanbul Technical University.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/home-footer.css">
-    <link rel="stylesheet" href="CSS/whoami.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+</head>
 
-    <body>
-        <header>
-            <div class="container">
-                <a href="/", style='font-family: "futura-bold";'>Ragib Guliyev</a>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Me</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="future.html">Soon</a>
-                </nav>
-            </div>
-        </header>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">Ragib Guliyev</a>
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
 
-        <main>
-            <div class="wrapper">
-                <article class="whoami">
-                    <div class="section with-image-left">
-                        <div class="section-divider">
-                        <div>
-                            <h2>How it started?</h2>
-                            <img src="Assets/aboutme5.jpeg" alt="How it started?">
-                            <p>My fascination with Artificial Intelligence and Data Engineering ignited in the final years of high school as I watched AI evolve into a pivotal technology of the future. Compelled by its potential, I prepared diligently for the exams with the goal of joining a leading Turkish universities known for excellence in engineering. 
-                                In October 2021, my ambition became reality when I was accepted into Istanbul Technical University's esteemed Computer Engineering faculty, specializing in AI and Data Engineering department. Here, I've found my passion aligning with rigorous academics and practical projects that challenge and broaden my understanding daily.
-                                 At ITU, each lecture, lab session, and project propels me closer to becoming an expert in AI, equipped to contribute meaningfully to this dynamic field. As my education continues, I remain excited and ready for the innovations and opportunities that lie ahead.</p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="section with-image-right">
-                        <div class="section-divider">
-                        <div>
-                            <h2>What Drives Me?</h2>
-                            <img src="Assets/aboutme1.jpeg" alt="What Drives Me">
-                            <p>What truly drives me is the challenge of turning raw data into meaningful insights...</p>
-                        </div>
-                        </div>
-                    </div>
-                    
-                    <div class="section with-image-left">
-                        <div class="section-divider">
-                        <div>
-                            <h2>Projects and Achievements</h2>
-                            <img src="path-to-your-image.jpg" alt="Projects and Achievements">
-                            <p>Throughout my career, I've had the opportunity to work on a variety of projects...</p>
-                        </div>
+    <main>
+        <div class="wrapper">
+            <!-- Hero Section -->
+            <section class="about-hero">
+                <div class="hero-content">
+                    <h1>About <span>Me</span></h1>
+                    <p class="hero-summary">AI & Data Engineer focused on autonomous systems and production-grade ML.
+                        Experienced in fine-tuning and integrating Hugging Face models, state-of-the-art diffusion
+                        models, and Llama.cpp into real applications. Building end-to-end pipelines with Airflow and
+                        Flink, designing scalable data layers across SQL/NoSQL databases, and delivering full-stack
+                        products.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="Assets/aboutme5.jpeg" alt="Ragib Guliyev" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="about-section">
+                <h2 class="section-title">
+                    <span class="section-icon">🎓</span>
+                    Education
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">October 2021 - Present</span>
+                            <h3>Bachelor's Degree in Artificial Intelligence and Data Engineering</h3>
+                            <p class="timeline-location">Istanbul Technical University, Istanbul, Turkey</p>
                         </div>
                     </div>
-                    
-                    <div class="section with-image-right">
-                        <div class="section-divider">
-                        <div>
-                            <h2>Beyond the Code</h2>
-                            <img src="path-to-another-image.jpg" alt="Beyond the Code">
-                            <p>When I'm not immersed in data or coding, you'll find me exploring the latest in AI research...</p>
-                        </div>
+                </div>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section class="about-section">
+                <h2 class="section-title">
+                    <span class="section-icon">💼</span>
+                    Work Experience
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker current"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">July 2025 - Present</span>
+                            <h3>AI Engineer</h3>
+                            <p class="timeline-location">Baykar Technologies, Istanbul, Turkey</p>
                         </div>
                     </div>
-                </article>
-            </div>
-        </main>    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">May 2025 - July 2025</span>
+                            <span class="timeline-badge">Internship</span>
+                            <h3>AI Engineer</h3>
+                            <p class="timeline-location">4SİM - Fourth Industrial Revolution Analysis and Coordination
+                                Center, Baku, Azerbaijan</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">September 2024 - December 2024</span>
+                            <span class="timeline-badge">Internship</span>
+                            <h3>AI Software Developer</h3>
+                            <p class="timeline-location">Baykar Technologies, Istanbul, Turkey</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">July 2024 - September 2024</span>
+                            <span class="timeline-badge">Internship</span>
+                            <h3>Data Engineer and Analyst</h3>
+                            <p class="timeline-location">Innovations and Digital Development Agency, Baku, Azerbaijan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="about-section">
+                <h2 class="section-title">
+                    <span class="section-icon">🛠️</span>
+                    Technical Skills
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend & Web</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Engineering & Processing</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Apache Airflow</span>
+                            <span class="skill-tag">Apache NiFi</span>
+                            <span class="skill-tag">Apache Spark</span>
+                            <span class="skill-tag">Apache Flink</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases & Data Stores</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Cassandra</span>
+                            <span class="skill-tag">ClickHouse</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Elasticsearch</span>
+                            <span class="skill-tag">Milvus</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps & Monitoring</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Prometheus</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">Kibana</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Analytics & BI</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Microsoft Excel</span>
+                            <span class="skill-tag">SonarQube</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages Section -->
+            <section class="about-section">
+                <h2 class="section-title">
+                    <span class="section-icon">🌍</span>
+                    Languages
+                </h2>
+                <div class="languages-grid">
+                    <div class="language-item">
+                        <span class="language-name">Azerbaijani</span>
+                        <span class="language-level native">Native (C2)</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Russian</span>
+                        <span class="language-level native">Native (C2)</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English</span>
+                        <span class="language-level proficient">Proficient (C1)</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">Turkish</span>
+                        <span class="language-level proficient">Proficient (C1)</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">German</span>
+                        <span class="language-level beginner">Beginner (A1)</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Activities Section -->
+            <section class="about-section">
+                <h2 class="section-title">
+                    <span class="section-icon">🤝</span>
+                    Social Activities
+                </h2>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <h3>International Bees Club, ITU</h3>
+                        <p>Organizer - Leading the organization of events for international students</p>
+                    </div>
+                    <div class="activity-card">
+                        <h3>Football Team, ITU</h3>
+                        <p>Team Member - Contributing to team spirit and engagements</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <div class="footer-container">
         <div class="copy">
-            <p>Copyright &copy; 2024 - Ragib Guliyev. All rights reserved.</p>
+            <p>Copyright &copy; 2026 - Ragib Guliyev. All rights reserved.</p>
         </div>
         <div class="links">
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-            <a href="future.html">Soon</a>
         </div>
         <div class="social">
-            <a href="https://www.facebook.com/ragibglv?mibextid=LQQJ4d">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"/> </g> </svg>
+            <a href="https://www.facebook.com/ragibglv?mibextid=LQQJ4d" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+                </svg>
             </a>
-            <a href="https://www.linkedin.com/in/ragib-guliyev/">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.83783C1 2.35041 1.19363 1.88295 1.53829 1.53829C1.88295 1.19363 2.35041 1 2.83783 1H21.1611C21.4025 1 21.6415 1.04754 21.8644 1.1399C22.0874 1.23226 22.29 1.36763 22.4607 1.53829C22.6313 1.70895 22.7667 1.91155 22.8591 2.13452C22.9514 2.3575 22.999 2.59648 22.999 2.83783V21.1611C22.999 21.4025 22.9514 21.6415 22.8591 21.8644C22.7667 22.0874 22.6313 22.29 22.4607 22.4607C22.29 22.6313 22.0874 22.7667 21.8644 22.8591C21.6415 22.9514 21.4025 22.999 21.1611 22.999H2.83783C2.35041 22.999 1.88295 22.8053 1.53829 22.4607C1.19363 22.116 1 21.6486 1 21.1611V2.83783ZM9.70792 9.38711H12.687V10.884C13.1164 10.0232 14.2168 9.24961 15.8699 9.24961C19.0387 9.24961 19.7908 10.9628 19.7908 14.1063V19.9283H16.5826V14.8222C16.5826 13.0321 16.1532 12.0224 15.061 12.0224C13.5463 12.0224 12.9161 13.1109 12.9161 14.8222V19.9283H9.70792V9.38711ZM4.20818 19.7908H7.41637V9.24961H4.20818V19.7908ZM7.87468 5.81227C7.87468 6.08311 7.82133 6.3513 7.71769 6.60152C7.61404 6.85174 7.46212 7.0791 7.27061 7.27061C7.0791 7.46212 6.85174 7.61404 6.60152 7.71769C6.3513 7.82133 6.08311 7.87468 5.81227 7.87468C5.54144 7.87468 5.27325 7.82133 5.02303 7.71769C4.7728 7.61404 4.54545 7.46212 4.35393 7.27061C4.16242 7.0791 4.01051 6.85174 3.90686 6.60152C3.80322 6.3513 3.74987 6.08311 3.74987 5.81227C3.74987 5.26529 3.96716 4.74071 4.35393 4.35393C4.74071 3.96716 5.26529 3.74987 5.81227 3.74987C6.35926 3.74987 6.88384 3.96716 7.27061 4.35393C7.65739 4.74071 7.87468 5.26529 7.87468 5.81227Z" fill="black"/> </svg>
+            <a href="https://www.linkedin.com/in/ragib-guliyev/" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
             </a>
-            <a href="https://www.instagram.com/rqbqlyv/">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path fill-rule="nonzero" d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/> </g> </svg>
+            <a href="https://www.instagram.com/rqbqlyv/" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
             </a>
-            <a href="https://open.spotify.com/user/eurx85e6ox2het1h0vojmn3sx?si=8d82c328ebba4852">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path fill-rule="nonzero" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.55 2 12 2zm3.75 14.65c-2.35-1.45-5.3-1.75-8.8-.95-.35.1-.65-.15-.75-.45-.1-.35.15-.65.45-.75 3.8-.85 7.1-.5 9.7 1.1.35.15.4.55.25.85-.2.3-.55.4-.85.2zm1-2.7c-2.7-1.65-6.8-2.15-9.95-1.15-.4.1-.85-.1-.95-.5-.1-.4.1-.85.5-.95 3.65-1.1 8.15-.55 11.25 1.35.3.15.45.65.2 1s-.7.5-1.05.25zM6.3 9.75c-.5.15-1-.15-1.15-.6-.15-.5.15-1 .6-1.15 3.55-1.05 9.4-.85 13.1 1.35.45.25.6.85.35 1.3-.25.35-.85.5-1.3.25C14.7 9 9.35 8.8 6.3 9.75z"/> </g> </svg>
+            <a href="https://open.spotify.com/user/eurx85e6ox2het1h0vojmn3sx?si=8d82c328ebba4852" aria-label="Spotify">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+                </svg>
             </a>
-            <a href="https://github.com/ragibglv">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g> <path fill="none" d="M0 0h24v24H0z"/> <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"/> </g> </svg>
+            <a href="https://github.com/ragibglv" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
             </a>
         </div>
     </div>
+
+    <script src="JS/theme.js"></script>
+    <script src="JS/navigation.js"></script>
 </body>
+
 </html>
